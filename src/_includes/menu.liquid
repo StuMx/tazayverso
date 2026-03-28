@@ -1,0 +1,27 @@
+<section id="menu" class="max-w-screen-xl py-[4em]">
+    
+    <div class="grid grid-cols-3 gap-4 items-end">
+        <div class="bg-neutral-dark rounded-lg max-w-[340px] h-[300px] p-[1em] ">
+            <h1 class="text-primary text-4xl">Antología de sabores</h1>
+            <h2 class="text-tertiary">Carta de bebidas</h2>
+        </div>
+        {% for item in menu %}
+        <article class="max-w-[340px] rounded-lg
+        flex flex-col justify-end overflow-hidden shadow-lg
+        hover:scale-105 transition duration-300 ease-in-out
+        {% cycle 'height': 'h-[440px]', 'h-[420px]' %}
+        {% cycle 'cardbg': 'bg-card-highlight-1', 'bg-card-highlight-2', 'bg-card-highlight-3', 'bg-card-highlight-4' %}">
+            <img src="{{ item.img }}" alt="" class="w-full max-h-[256px] object-contain">
+            <div class="p-4 {% cycle 'textbg': 'bg-white', 'bg-neutral-dark' %}">
+                <div class="flex items-start justify-between pb-2">
+                    <h3 class="flex-1 text-primary text-lg font-bold">{{ item.name }}</h3>
+                    <span class="w-auto text-tertiary">${{ item.price }}</span>
+                </div>
+                <p >
+                    {{ item.description }}
+                </p>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>

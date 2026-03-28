@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Espresso",
+    "price": 140,
+    "description": "La esencia pura y potente del grano en un solo sorbo.",
+    "img": "/assets/img/products/espresso.png",
+    "tag": ["drink"]
+  },
+  {
+    "name": "Capuccino",
+    "price": 90,
+    "description": "Un abrazo suave de leche vaporizada con un toque de café.",
+    "img": "/assets/img/products/capuccino.png",
+    "tag": ["drink"]
+  },
+  {
+    "name": "Latte",
+    "price": 55,
+    "description": "El equilibrio perfecto entre café intenso y una nube de espuma.",
+    "img": "/assets/img/products/latte.png",
+    "tag": ["drink"]
+  },
+  {
+    "name": "Americano",
+    "price": 140,
+    "description": "La fuerza del espresso suavizada para disfrutar sin prisas.",
+    "img": "/assets/img/products/americano.png",
+    "tag": ["drink"]
+  },
+  {
+    "name": "Café de Olla",
+    "price": 90,
+    "description": "Tradicional café mexicano infusionado con piloncillo, canela y un toque de naranja.",
+    "img": "/assets/img/products/olla.png",
+    "tag": ["drink"]
+  },
+  {
+    "name": "Frappé",
+    "price": 90,
+    "description": "Refrescante mezcla de café premium granizado con hielo y leche, coronada con crema batida.",
+    "img": "/assets/img/products/frappe.png",
+    "tag": ["drink"]
+  }
+]

@@ -1,0 +1,53 @@
+<section id="hero" onscroll="scrllTo('menu')" class="h-[98vh] w-full
+    bg-cover bg-center bg-[url('/assets/img/tyv_hero.jpg')] bg-sky-300
+    flex flex-col justify-between">
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-[98vh] object-cover">
+        <source src="/assets/img/tyv_hero.mp4" type="video/mp4">
+        <!-- Fallback text for browsers that don't support the video tag -->
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="absolute h-[98vh] inset-0 bg-gradient-to-r from-black/70 via-transparent to-transparent pointer-events-none"></div>
+
+    <div class="max-w-screen-xl z-10 h-full mt-[1em] mx-auto flex flex-col items-center justify-between -translate-x-1/2">
+        <div class="text-[72px] w-full text-secondary text-shadow-lg">
+            <h1 class="font-bold ">Taza & Verso</h1>
+            <h2>Historias que<br/>se beben</h2>
+        </div>
+        <div class="pb-[7%] w-full text-center">
+            <button type="button" class=" text-secondary align-top text-shadow-lg" onclick="scrllTo('menu')">
+                <span class="material-symbols-outlined text-5xl animate-bounce">keyboard_double_arrow_down</span><br>
+                Desliza para hojear la carta
+            </button>
+            <!-- <button type="button" class="h-12 px-[1em] py-[0.5em] rounded
+            bg-secondary/50 text-primary align-top backdrop-blur-md">
+                <span class="material-symbols-outlined text-3xl">pin_drop</span>
+            </button> -->
+        </div>
+    </div>
+    <script>
+        function scrllTo(sectionId) {
+            const section = document.getElementById(sectionId);
+            console.log('Scrolling to section:', sectionId, section);
+            if (section) {
+                document
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        const hero = document.getElementById('hero');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            console.log("User has scrolled past the hero section");
+            scrllTo('menu');
+        } else {
+            console.log("User is viewing the hero section");
+        }
+    });
+}, { threshold: 0.9 }); // Triggers when 90% of the section is visible
+
+observer.observe(hero);
+    </script>
+</section>
